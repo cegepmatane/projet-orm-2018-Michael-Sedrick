@@ -7,7 +7,7 @@ import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 public class ExoplaneteVue extends Application{
-    protected int largeurFenetre = 400,
+    protected int largeurFenetre = 600,
                 hauteurFenetre = 400;
 
     protected String nomFenetre = "Les Exoplanètes";
