@@ -1,14 +1,20 @@
 package ca.qc.cgmatane.exoplanetes.dao;
 
 import ca.qc.cgmatane.exoplanetes.modele.Exoplanete;
+
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class ExoplaneteDAO {
-    public void rechercherInformationsExoplanete(){
+
+    public List<Exoplanete> rechercherInformationsExoplanete(){
+        List<Exoplanete> exoplanetes = new ArrayList<Exoplanete>();
         Configuration configuration = new Configuration();
         configuration.addClass(Exoplanete.class);
         SessionFactory sessionControleur = configuration.buildSessionFactory();
@@ -21,10 +27,13 @@ public class ExoplaneteDAO {
 
         while(visiteurExoplanete.hasNext()){
             Exoplanete exoplanete = (Exoplanete) visiteurExoplanete.next();
-            System.out.println(exoplanete.getPlanete());
+            exoplanetes.add(exoplanete);
+            //System.out.println(exoplanete.getPlanete());
         }
 
         session.close();
         sessionControleur.close();
+
+        return exoplanetes;
     }
 }

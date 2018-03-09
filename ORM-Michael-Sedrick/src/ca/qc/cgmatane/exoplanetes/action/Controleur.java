@@ -11,6 +11,6 @@ public class Controleur {
         this.vue = vue;
 
         exoplaneteDAO = new ExoplaneteDAO();
-        exoplaneteDAO.rechercherInformationsExoplanete();
+        vue.afficherInformations(exoplaneteDAO.rechercherInformationsExoplanete());
     }
 }
