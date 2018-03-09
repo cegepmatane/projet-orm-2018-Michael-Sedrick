@@ -1,5 +1,8 @@
+import ca.qc.cgmatane.exoplanetes.vue.ExoplaneteVue;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello There !");
+        ExoplaneteVue exoplaneteVue = new ExoplaneteVue();
+        exoplaneteVue.launch(ExoplaneteVue.class, args);
     }
 }
