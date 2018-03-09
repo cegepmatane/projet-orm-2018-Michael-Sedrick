@@ -2,7 +2,7 @@
   PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
   "http://www.hibernate.org/dtd/hibernate-mapping-2.0.dtd"><hibernate-mapping>
 
-  <class name="Exoplanete" table="exoplanetes">
+  <class name="ca.qc.cgmatane.exoplanetes.modele.Exoplanete" table="exoplanetes">
     <id name="planete" type="string" column="planete">
       <generator class="native"/>
     </id>
