@@ -15,7 +15,7 @@ public class ExoplaneteVue extends Application{
     protected int largeurFenetre = 600,
                 hauteurFenetre = 400;
 
-    protected String nomFenetre = "Les Exoplanètes";
+    protected String nomFenetre = "Les Exoplanetes";
 
     protected Controleur controleur;
 
