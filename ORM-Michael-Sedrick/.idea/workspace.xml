@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -26,7 +26,7 @@
         <entry file="file://$PROJECT_DIR$/src/hibernate.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="7" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,13 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExoplaneteVue.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExoplaneteVue.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/vue/ExoplaneteVue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="-102">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#1123#1124#0" expanded="true" />
                 <element signature="e#1182#1183#0" expanded="true" />
               </folding>
@@ -228,7 +227,7 @@
     <option name="height" value="876" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -484,12 +483,12 @@
       <option name="presentableId" value="Default" />
       <updated>1520542761368</updated>
       <workItem from="1520542764308" duration="16020000" />
-      <workItem from="1521165024857" duration="1911000" />
+      <workItem from="1521165024857" duration="2931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20385000" />
+    <option name="totallyTimeSpent" value="21405000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1448" y="-148" width="1456" height="876" extended-state="6" />
@@ -566,7 +565,6 @@
         <state relative-caret-position="170">
           <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1123#1124#0" expanded="true" />
             <element signature="e#1182#1183#0" expanded="true" />
           </folding>
@@ -808,7 +806,6 @@
         <state relative-caret-position="442">
           <caret line="35" column="66" lean-forward="false" selection-start-line="35" selection-start-column="66" selection-end-line="35" selection-end-column="66" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1123#1124#0" expanded="true" />
             <element signature="e#1182#1183#0" expanded="true" />
           </folding>
@@ -846,7 +843,6 @@
         <state relative-caret-position="56">
           <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1123#1124#0" expanded="true" />
             <element signature="e#1182#1183#0" expanded="true" />
           </folding>
@@ -1094,7 +1090,6 @@
         <state relative-caret-position="56">
           <caret line="84" column="13" lean-forward="true" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#1123#1124#0" expanded="true" />
             <element signature="e#1182#1183#0" expanded="true" />
           </folding>
@@ -1124,6 +1119,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#3139#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1241,20 +1239,8 @@
     <entry file="file://$PROJECT_DIR$/src/hibernate.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="7" column="36" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/vue/ExoplaneteVue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="24" column="4" lean-forward="false" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1182#1183#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1271,6 +1257,17 @@
         <state relative-caret-position="85">
           <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/vue/ExoplaneteVue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

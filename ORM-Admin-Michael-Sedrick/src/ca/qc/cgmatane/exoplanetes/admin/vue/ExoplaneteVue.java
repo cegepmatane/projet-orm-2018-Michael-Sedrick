@@ -2,9 +2,12 @@ package ca.qc.cgmatane.exoplanetes.admin.vue;
 
 import ca.qc.cgmatane.exoplanetes.admin.action.Controleur;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.text.TextFlow;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 
 public class ExoplaneteVue extends Application{
 
@@ -14,12 +17,40 @@ public class ExoplaneteVue extends Application{
     protected int largeurFenetre = 600,
                     hauteurFenetre = 400;
 
-    protected TextFlow racine;
+    protected VBox racine;
+
+    protected Button boutonAjouter,
+                    boutonModifier,
+                    boutonSupprimer;
 
     @Override
     public void start(Stage scenePrincipal) {
-        racine = new TextFlow();
+        boutonAjouter = new Button("Ajouter");
+        boutonAjouter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Ajouter");
+            }
+        });
+        boutonModifier = new Button("Modifier");
+        boutonModifier.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Modifier");
+            }
+        });
+        boutonSupprimer = new Button("Supprimer");
+        boutonSupprimer.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.out.println("Supprimer");
+            }
+        });
 
+        racine = new VBox();
+        racine.getChildren().add(boutonAjouter);
+        racine.getChildren().add(boutonModifier);
+        racine.getChildren().add(boutonSupprimer);
         scenePrincipal.setScene(new Scene(racine,largeurFenetre, hauteurFenetre));
         scenePrincipal.setTitle(nomFenetre);
         scenePrincipal.show();
