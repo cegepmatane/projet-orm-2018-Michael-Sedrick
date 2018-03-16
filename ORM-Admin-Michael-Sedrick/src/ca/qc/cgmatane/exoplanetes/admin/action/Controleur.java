@@ -40,4 +40,13 @@ public class Controleur {
             System.out.println(e.getPlanete());
         }*/
     }
+    public void actionBoutonsSupprimmer(String planete)
+    {
+        exoplaneteDAO.SupprimerExoplanete(planete);
+    }
+
+    public void actionBoutonsModifier(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte)
+    {
+
+    }
 }

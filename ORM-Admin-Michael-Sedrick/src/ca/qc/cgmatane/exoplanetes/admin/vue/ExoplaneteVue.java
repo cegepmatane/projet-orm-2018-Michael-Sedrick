@@ -6,6 +6,8 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
@@ -74,14 +76,98 @@ public class ExoplaneteVue extends Application{
                 public void handle(ActionEvent event) {
                     System.out.println(b.getText());
                     if (supprimer) {
-                        System.out.println(supprimer);
+                        controleur.actionBoutonsSupprimmer(b.getText());
                     } else {
-                        System.out.println(supprimer);
+                        controleur.actionBoutonsModifier();
                     }
                 }
             });
 
             racine.getChildren().add(b);
         }
+    }
+
+    public void afficherChampsDeModification(String planete)
+    {
+        racine.getChildren().clear();
+
+        Label lblNomPlanete = new Label("Planete");
+        TextField nomPlanete = new TextField(planete);
+
+        Label lblNomEtoile = new Label("Etoile");
+        TextField nomEtoile = new TextField();
+
+        Label lblTypeEtoile = new Label("Type d'etoile");
+        TextField typeEtoile = new TextField();
+
+        Label lblMasse = new Label("Masse");
+        TextField masse = new TextField();
+
+        Label lblRayon = new Label("Rayon");
+        TextField rayon = new TextField();
+
+        Label lblFlux = new Label("Flux");
+        TextField flux = new TextField();
+
+        Label lblTemperature = new Label("Temperature");
+        TextField temperature = new TextField();
+
+        Label lblPeriode = new Label("Periode");
+        TextField periode = new TextField();
+
+        Label lblDistance = new Label("Distance");
+        TextField distance = new TextField();
+
+        Label lblZone = new Label("Zone");
+        TextField zone = new TextField();
+
+        Label lblIst = new Label("Ist");
+        TextField ist = new TextField();
+
+        Label lblSph = new Label("Sph");
+        TextField sph = new TextField();
+
+        Label lblHzd = new Label("Hzd");
+        TextField hzd = new TextField();
+
+        Label lblHzc = new Label("Hzc");
+        TextField hzc = new TextField();
+
+        Label lblHza = new Label("Hza");
+        TextField hza = new TextField();
+
+        Label lblPClasse = new Label("P Classe");
+        TextField pClasse = new TextField();
+
+        Label lblHClasse = new Label("H Classe");
+        TextField hClasse = new TextField();
+
+        Label lblPhi = new Label("Phi");
+        TextField phi = new TextField();
+
+        Label lblDistance2 = new Label("Distance 2");
+        TextField distance2 = new TextField();
+
+        Label lblStatus = new Label("Status");
+        TextField status = new TextField();
+
+        Label lblDecouverte = new Label("Decouverte");
+        TextField decouverte = new TextField();
+
+        Button btnSauvegarder = new Button("Sauvegarder les modifications");
+
+        btnSauvegarder.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event)
+            {
+             controleur.
+            }
+        });
+
+        racine.getChildren().addAll(lblNomPlanete, nomPlanete, lblNomEtoile, nomEtoile, lblTypeEtoile, typeEtoile, lblMasse, masse, lblRayon, rayon, lblFlux, flux, lblTemperature, temperature, lblPeriode, periode, lblDistance, distance, lblZone, zone, lblIst, ist, lblSph, sph, lblHzd, hzd,lblHzc, hzc, lblHza, hza, lblPClasse, pClasse, lblHClasse, hClasse, lblPhi, phi, lblDistance2, distance2, lblStatus, status, lblDecouverte, decouverte );
+
+
+
+
     }
 }

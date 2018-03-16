@@ -1,11 +1,12 @@
 package ca.qc.cgmatane.exoplanetes.admin.dao;
 
 import ca.qc.cgmatane.exoplanetes.admin.modele.Exoplanete;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
+import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -35,33 +36,28 @@ public class ExoplaneteDAO {
         return exoplanetes;
     }
 
-    /*public void ajouterExoplanete(String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte) {
+    public void ajouterExoplanete(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte) {
+
+    }
+    //String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte
+
+    public void modifierExoplanete(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte) {
 
     }
 
-    public void modifierExoplanete(String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte) {
+    public void SupprimerExoplanete(String planete) {
 
-    }
-
-    public void SupprimerExoplanete(int id) {
+        String sql =  "DELETE FROM explanetes WHERE planete =" + planete;
         Configuration configuration = new Configuration();
         configuration.addClass(Exoplanete.class);
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
-        Transaction tx = null;
 
-        try {
-            tx = session.beginTransaction();
-            Exoplanete exoplanete = (Exoplanete) session.get(Exoplanete.class, id);
-            session.delete(exoplanete);
-            tx.commit();
-        } catch (HibernateException e) {
-            if (tx == null) tx.rollback();
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
+       Query q = session.createQuery(sql);
+       q.executeUpdate();
 
 
-    }*/
+
+
+    }
 }
