@@ -37,13 +37,13 @@ public class ExoplaneteDAO {
 
         return exoplanetes;
     }
-    public void ajouterExoplanete()
+    public void ajouterExoplanete(String planete, String etoile,String  typeEtoile,String masse,String rayon,String flux,String temperature,String  periode,String  distance,String zone, float ist, float sph,float hzd, String hzc,String  hza,String pClasse,String hClasse,  float phi,String distance2, String status,String decouverte)
     {
 
     }
     public void modifierExoplanete(String planete, String etoile,String  typeEtoile,String masse,String rayon,String flux,String temperature,String  periode,String  distance,String zone, float ist, float sph,float hzd, String hzc,String  hza,String pClasse,String hClasse,  float phi,String distance2, String status,String decouverte)
     {
-        
+
     }
     public void SupprimerExoplanete(int id)
     {
