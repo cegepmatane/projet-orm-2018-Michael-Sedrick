@@ -29,21 +29,21 @@ public class ExoplaneteVue extends Application{
         boutonAjouter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Ajouter");
+                controleur.ajouterExoplanete();
             }
         });
         boutonModifier = new Button("Modifier");
         boutonModifier.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Modifier");
+                controleur.modifierExoplanete();
             }
         });
         boutonSupprimer = new Button("Supprimer");
         boutonSupprimer.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Supprimer");
+                controleur.supprimerExoplanete();
             }
         });
 

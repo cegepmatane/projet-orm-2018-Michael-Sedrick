@@ -1,8 +1,6 @@
 package ca.qc.cgmatane.exoplanetes.admin.dao;
 
 import ca.qc.cgmatane.exoplanetes.admin.modele.Exoplanete;
-
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -37,7 +35,7 @@ public class ExoplaneteDAO {
         return exoplanetes;
     }
 
-    public void ajouterExoplanete(String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte) {
+    /*public void ajouterExoplanete(String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte) {
 
     }
 
@@ -65,5 +63,5 @@ public class ExoplaneteDAO {
         }
 
 
-    }
+    }*/
 }
