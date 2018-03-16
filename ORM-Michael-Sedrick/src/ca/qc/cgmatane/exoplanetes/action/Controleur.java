@@ -14,9 +14,4 @@ public class Controleur {
         exoplaneteDAO = new ExoplaneteDAO();
         vue.afficherInformations(exoplaneteDAO.rechercherInformationsExoplanete());
     }
-
-    public void lancerVueAdmin()
-    {
-        vue.lancerVueAdmin();
-    }
 }
