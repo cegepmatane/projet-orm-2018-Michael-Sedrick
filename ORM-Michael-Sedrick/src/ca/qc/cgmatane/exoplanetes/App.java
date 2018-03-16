@@ -1,3 +1,5 @@
+package ca.qc.cgmatane.exoplanetes;
+
 import ca.qc.cgmatane.exoplanetes.vue.ExoplaneteVue;
 
 public class App {
