@@ -160,11 +160,11 @@ public class ExoplaneteVue extends Application{
             @Override
             public void handle(ActionEvent event)
             {
-             controleur.
+             controleur.actionBoutonsModifier(nomPlanete.getText(), nomEtoile.getText(), typeEtoile.getText(), masse.getText() , rayon.getText(), flux.getText(), temperature.getText(), periode.getText(), distance.getText(), zone.getText(), ist.getText(), sph.getText(), hzd.getText(), hzc.getText(), hza.getText(), pClasse.getText(), hClasse.getText(), phi.getText(), distance2.getText(), status.getText(), decouverte.getText());
             }
         });
 
-        racine.getChildren().addAll(lblNomPlanete, nomPlanete, lblNomEtoile, nomEtoile, lblTypeEtoile, typeEtoile, lblMasse, masse, lblRayon, rayon, lblFlux, flux, lblTemperature, temperature, lblPeriode, periode, lblDistance, distance, lblZone, zone, lblIst, ist, lblSph, sph, lblHzd, hzd,lblHzc, hzc, lblHza, hza, lblPClasse, pClasse, lblHClasse, hClasse, lblPhi, phi, lblDistance2, distance2, lblStatus, status, lblDecouverte, decouverte );
+        racine.getChildren().addAll(lblNomPlanete, nomPlanete, lblNomEtoile, nomEtoile, lblTypeEtoile, typeEtoile, lblMasse, masse, lblRayon, rayon, lblFlux, flux, lblTemperature, temperature, lblPeriode, periode, lblDistance, distance, lblZone, zone, lblIst, ist, lblSph, sph, lblHzd, hzd,lblHzc, hzc, lblHza, hza, lblPClasse, pClasse, lblHClasse, hClasse, lblPhi, phi, lblDistance2, distance2, lblStatus, status, lblDecouverte, decouverte, btnSauvegarder );
 
 
 

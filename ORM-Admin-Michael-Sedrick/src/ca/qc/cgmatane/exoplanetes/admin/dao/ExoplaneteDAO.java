@@ -42,7 +42,14 @@ public class ExoplaneteDAO {
     //String planete, String etoile, String typeEtoile, String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, float ist, float sph, float hzd, String hzc, String hza, String pClasse, String hClasse, float phi, String distance2, String status, String decouverte
 
     public void modifierExoplanete(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte) {
+        String sql = "UPDATE exopanetes SET planete = " + planete +", Etoile = "+ etoile +", typeEtoile = " + type + ", masse = " + masse +", rayon = " + rayon + ", flux = " + flux + ", temperature = " + temperature + ", periode = " + periode +", distance = "+ distance +", zone = "+ zone +", ist = "+ ist +", sph = "+ sph +", hzd = "+ hzd +", hzc = "+ hzc +", hzc = "+ hzc +", hza = "+ hza +", pClasse = "+ pClasse +", hClasse = "+ hClasse +", phi = "+ phi +", distance2 = "+ distance2 +", status = "+ status +", decouverte = "+ decouverte +" WHERE planete = " + planete;
+        Configuration configuration = new Configuration();
+        configuration.addClass(Exoplanete.class);
+        SessionFactory sessionControleur = configuration.buildSessionFactory();
+        Session session = sessionControleur.openSession();
 
+        Query q = session.createQuery(sql);
+        q.executeUpdate();
     }
 
     public void SupprimerExoplanete(String planete) {
