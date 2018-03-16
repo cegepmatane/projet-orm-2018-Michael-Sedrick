@@ -2,7 +2,7 @@ package ca.qc.cgmatane.exoplanetes.action;
 
 import ca.qc.cgmatane.exoplanetes.dao.ExoplaneteDAO;
 import ca.qc.cgmatane.exoplanetes.vue.ExoplaneteVue;
-import ca.qc.cgmatane.exoplanetes.vue.ExoplaneteAdminVue;
+//import ca.qc.cgmatane.exoplanetes.vue.ExoplaneteAdminVue;
 
 public class Controleur {
     protected ExoplaneteVue vue;
@@ -17,8 +17,6 @@ public class Controleur {
 
     public void lancerVueAdmin()
     {
-        ExoplaneteAdminVue vueAdmin;
-        vueAdmin = new ExoplaneteAdminVue();
-        vueAdmin.launch(ExoplaneteAdminVue.class);
+        vue.lancerVueAdmin();
     }
 }

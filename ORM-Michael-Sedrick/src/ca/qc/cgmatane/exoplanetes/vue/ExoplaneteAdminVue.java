@@ -1,4 +1,4 @@
-package ca.qc.cgmatane.exoplanetes.vue;
+/*package ca.qc.cgmatane.exoplanetes.vue;
 
 import ca.qc.cgmatane.exoplanetes.action.Controleur;
 import ca.qc.cgmatane.exoplanetes.action.ControleurAdmin;
@@ -19,15 +19,13 @@ public class ExoplaneteAdminVue extends Application {
             hauteurFenetre = 400;
     protected String nomFenetre = "Panneau admin Les Exoplanètes";
     protected ControleurAdmin controleur = new ControleurAdmin(this);
-    Button btnAjouter;
-    Button btnModifier;
-    Button btnSupprimer;
-    List<Button> listeBouton = new ArrayList<Button>();
+    protected Button btnAjouter, btnModifier, btnSupprimer;
+    protected List<Button> listeBouton = new ArrayList<Button>();
     protected VBox racine;
     @Override
 
     public void start(Stage scenePrincipale) throws Exception {
-        racine = new VBox();
+       racine = new VBox();
         scenePrincipale.setScene(new Scene(racine, largeurFenetre, hauteurFenetre));
         btnAjouter = new Button();
         btnModifier = new Button();
@@ -39,9 +37,24 @@ public class ExoplaneteAdminVue extends Application {
 
         btnAjouter.setText("Ajouter une exoplanete");
         btnSupprimer.setText("Supprimer une exoplanete");
+        btnSupprimer.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                racine.getChildren().clear();
+                List<Button> listeBouton = controleur.getListeBoutonExoplanetes();
+                for (Button b: listeBouton)
+                {
+                    b.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override public void handle(ActionEvent e) {
+                            //get l'id de la planete a supprimer avec getIndexOf()
+                            //appeler la fonction (a creer) supprimer planete dans controleurAdmin avec l'id en param
+                        }
+                    });
+                    racine.getChildren().add(b);
+                }
+            }
+        });
 
         btnModifier.setText("modifier une exoplanete");
-
         btnModifier.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
                 racine.getChildren().clear();
@@ -64,3 +77,4 @@ public class ExoplaneteAdminVue extends Application {
 
     }
 }
+*/

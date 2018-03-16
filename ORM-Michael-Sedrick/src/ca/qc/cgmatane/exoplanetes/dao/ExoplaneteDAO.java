@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -35,5 +36,36 @@ public class ExoplaneteDAO {
         sessionControleur.close();
 
         return exoplanetes;
+    }
+    public void ajouterExoplanete()
+    {
+
+    }
+    public void modifierExoplanete()
+    {
+
+    }
+    public void SupprimerExoplanete(int id)
+    {
+        Configuration configuration = new Configuration();
+        configuration.addClass(Exoplanete.class);
+        SessionFactory sessionControleur = configuration.buildSessionFactory();
+        Session session = sessionControleur.openSession();
+        Transaction tx = null;
+
+        try{
+            tx = session.beginTransaction();
+            Exoplanete exoplanete = (Exoplanete)session.get(Exoplanete.class, id);
+            session.delete(exoplanete);
+            tx.commit();
+        }catch (HibernateException e)
+        {
+            if(tx == null)tx.rollback();
+            e.printStackTrace();
+        }finally {
+            session.close();
+        }
+
+
     }
 }
