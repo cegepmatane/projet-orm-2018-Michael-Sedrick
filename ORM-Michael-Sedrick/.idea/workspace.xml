@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.56421614">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
@@ -39,8 +39,8 @@
           <file leaf-file-name="ExoplaneteDAO.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/dao/ExoplaneteDAO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-60">
-                  <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+                <state relative-caret-position="646">
+                  <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -99,9 +99,9 @@
         <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/modele/Exoplanete.hbm.xml" />
         <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/modele/Exoplanete.java" />
         <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/action/Controleur.java" />
-        <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/dao/ExoplaneteDAO.java" />
         <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/vue/ExoplaneteVue.java" />
         <option value="$PROJECT_DIR$/src/hibernate.properties" />
+        <option value="$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/dao/ExoplaneteDAO.java" />
       </list>
     </option>
   </component>
@@ -393,12 +393,12 @@
       <workItem from="1521165024857" duration="2931000" />
       <workItem from="1521177251357" duration="666000" />
       <workItem from="1521224201007" duration="68000" />
-      <workItem from="1521467545189" duration="140000" />
+      <workItem from="1521467545189" duration="271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23088000" />
+    <option name="totallyTimeSpent" value="23219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -748,21 +748,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/dao/ExoplaneteDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/hibernate.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="41" lean-forward="false" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ca/qc/cgmatane/exoplanetes/dao/ExoplaneteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
