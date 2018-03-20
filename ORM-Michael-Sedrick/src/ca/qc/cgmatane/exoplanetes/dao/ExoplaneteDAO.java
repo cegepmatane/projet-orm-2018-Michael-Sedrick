@@ -13,13 +13,19 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class ExoplaneteDAO {
+    SessionFactory sessionControleur;
+    Session session;
+    public ExoplaneteDAO()
+    {
+        Configuration configuration = new Configuration();
+        configuration.addClass(Exoplanete.class);
+        sessionControleur = configuration.buildSessionFactory();
+        session = sessionControleur.openSession();
+    }
 
     public List<Exoplanete> rechercherInformationsExoplanete() {
         List<Exoplanete> exoplanetes = new ArrayList<Exoplanete>();
-        Configuration configuration = new Configuration();
-        configuration.addClass(Exoplanete.class);
-        SessionFactory sessionControleur = configuration.buildSessionFactory();
-        Session session = sessionControleur.openSession();
+
 
         Transaction operation = session.beginTransaction();
         Iterator visiteurExoplanete = session.createQuery("FROM Exoplanete").iterate(); // nom de la classe pas de la table
@@ -29,12 +35,16 @@ public class ExoplaneteDAO {
         while (visiteurExoplanete.hasNext()) {
             Exoplanete exoplanete = (Exoplanete) visiteurExoplanete.next();
             exoplanetes.add(exoplanete);
-            //System.out.println(exoplanete.getPlanete());
+            //System.out.print(exoplanete.getPlanete() + " ");
+            //System.out.println(exoplanete.getDecouverte());
         }
 
+        return exoplanetes;
+    }
+
+    public void detruire()
+    {
         session.close();
         sessionControleur.close();
-
-        return exoplanetes;
     }
 }

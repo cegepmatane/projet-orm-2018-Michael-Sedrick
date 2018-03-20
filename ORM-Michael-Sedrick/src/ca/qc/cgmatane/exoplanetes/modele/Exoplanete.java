@@ -1,29 +1,24 @@
 package ca.qc.cgmatane.exoplanetes.modele;
 
 public class Exoplanete {
+    protected int id;
+
     protected String planete,
-                     etoile,
-                     typeEtoile,
-                     masse,
-                     rayon,
-                     flux,
-                     temperature,
-                     periode,
-                     distance,
-                     zone;
-
-    protected float ist,
-                    sph;
-
-    protected String hzd,
+                    etoile,
+                    typeEtoile,
+                    masse,
+                    rayon,
+                    flux,
+                    temperature,
+                    periode,
+                    distance,
+                    zone,
+                    hzd,
                     hzc,
                     hza,
                     pClasse,
-                    hClasse;
-
-    protected float phi;
-
-    protected String distance2,
+                    hClasse,
+                    distance2,
                     status,
                     decouverte;
 
@@ -31,6 +26,14 @@ public class Exoplanete {
 
     public String getPlanete() {
         return planete;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public void setPlanete(String planete) {
@@ -109,22 +112,6 @@ public class Exoplanete {
         this.zone = zone;
     }
 
-    public float getIst() {
-        return ist;
-    }
-
-    public void setIst(float ist) {
-        this.ist = ist;
-    }
-
-    public float getSph() {
-        return sph;
-    }
-
-    public void setSph(float sph) {
-        this.sph = sph;
-    }
-
     public String getHzd() {
         return hzd;
     }
@@ -163,14 +150,6 @@ public class Exoplanete {
 
     public void sethClasse(String hClasse) {
         this.hClasse = hClasse;
-    }
-
-    public float getPhi() {
-        return phi;
-    }
-
-    public void setPhi(float phi) {
-        this.phi = phi;
     }
 
     public String getDistance2() {
