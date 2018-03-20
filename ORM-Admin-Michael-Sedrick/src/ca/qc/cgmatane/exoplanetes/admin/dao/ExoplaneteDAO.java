@@ -85,17 +85,20 @@ public class ExoplaneteDAO {
         q.executeUpdate();
     }
 
-    public void SupprimerExoplanete(String planete) {
-
-        String sql =  "DELETE FROM explanetes WHERE planete =" + planete;
+    public void SupprimerExoplanete(int id) {
+        //TODO peut etre un try/catch?
+       // String sql =  "DELETE FROM explanetes WHERE planete =" + planete;
         Configuration configuration = new Configuration();
         configuration.addClass(Exoplanete.class);
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
 
-       Query q = session.createQuery(sql);
-       q.executeUpdate();
-
+        Exoplanete exoplanete = (Exoplanete)session.load(Exoplanete.class, id);
+        session.delete(exoplanete);
+        session.flush();
+        /*  Query q = session.createQuery(sql);
+            q.executeUpdate();
+        */
 
 
 
