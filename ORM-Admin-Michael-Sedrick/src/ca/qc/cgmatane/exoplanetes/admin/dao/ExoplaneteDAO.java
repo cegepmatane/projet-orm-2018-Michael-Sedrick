@@ -30,8 +30,7 @@ public class ExoplaneteDAO {
             //System.out.println(exoplanete.getPlanete());
         }
 
-        session.close();
-        sessionControleur.close();
+
 
         return exoplanetes;
 
