@@ -3,7 +3,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-2.0.dtd"><hibernate-mapping>
 
     <class name="ca.qc.cgmatane.exoplanetes.admin.modele.Exoplanete" table="exoplanetes">
-        <id name="id" type="string" column="id">
+        <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
         <property name="planete" type="string" not-null="true"/>

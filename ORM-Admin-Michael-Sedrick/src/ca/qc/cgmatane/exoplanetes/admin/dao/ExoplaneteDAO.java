@@ -34,6 +34,7 @@ public class ExoplaneteDAO {
         sessionControleur.close();
 
         return exoplanetes;
+
     }
 
     public void ajouterExoplanete(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte) {

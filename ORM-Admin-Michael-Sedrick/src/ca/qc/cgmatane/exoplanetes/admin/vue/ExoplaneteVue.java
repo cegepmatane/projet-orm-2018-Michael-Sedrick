@@ -76,9 +76,9 @@ public class ExoplaneteVue extends Application{
                 public void handle(ActionEvent event) {
                     System.out.println(b.getText());
                     if (supprimer) {
-                        controleur.actionBoutonsSupprimmer(b.getText());
+                        controleur.actionBoutonsSupprimmer(boutons.indexOf(b));
                     } else {
-                        controleur.actionBoutonsModifier();
+                      //  controleur.actionBoutonsModifier();
                     }
                 }
             });
@@ -160,7 +160,7 @@ public class ExoplaneteVue extends Application{
             @Override
             public void handle(ActionEvent event)
             {
-             controleur.actionBoutonsModifier(nomPlanete.getText(), nomEtoile.getText(), typeEtoile.getText(), masse.getText() , rayon.getText(), flux.getText(), temperature.getText(), periode.getText(), distance.getText(), zone.getText(), ist.getText(), sph.getText(), hzd.getText(), hzc.getText(), hza.getText(), pClasse.getText(), hClasse.getText(), phi.getText(), distance2.getText(), status.getText(), decouverte.getText());
+             //controleur.actionBoutonsModifier(nomPlanete.getText(), nomEtoile.getText(), typeEtoile.getText(), masse.getText() , rayon.getText(), flux.getText(), temperature.getText(), periode.getText(), distance.getText(), zone.getText(), ist.getText(), sph.getText(), hzd.getText(), hzc.getText(), hza.getText(), pClasse.getText(), hClasse.getText(), phi.getText(), distance2.getText(), status.getText(), decouverte.getText());
             }
         });
 
