@@ -1,6 +1,7 @@
 package ca.qc.cgmatane.exoplanetes.admin.modele;
 
 public class Exoplanete {
+    protected int id;
     protected String planete,
             etoile,
             typeEtoile,
@@ -21,6 +22,10 @@ public class Exoplanete {
             decouverte;
 
     public Exoplanete(){}
+
+    public int getId(){return id;}
+
+    public void setId(int id){this.id = id;}
 
     public String getPlanete() {
         return planete;
