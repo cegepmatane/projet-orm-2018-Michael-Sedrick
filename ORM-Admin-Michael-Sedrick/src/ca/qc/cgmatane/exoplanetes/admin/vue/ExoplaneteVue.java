@@ -66,24 +66,24 @@ public class ExoplaneteVue extends Application{
     public void afficherBoutonsExoplanetes(List<Exoplanete> exoplanetes, boolean supprimer){
         racine.getChildren().clear();
         List<Button> boutons = new ArrayList<Button>();
-        int i = 0;
-        for (Exoplanete e : exoplanetes) {
+
+        for (int compteur = 0; compteur < exoplanetes.size(); compteur++) {
             //racine.getChildren().add(new Button(e.getPlanete()));
-            boutons.add(new Button(e.getPlanete()));
-            boutons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+            boutons.add(new Button(exoplanetes.get(compteur).getPlanete()));
+            int finalCompteur = compteur;
+            boutons.get(compteur).setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
                     //System.out.println(b.getText());
                     if (supprimer) {
-                        System.out.println(e.getPlanete());
-                        controleur.actionBoutonsSupprimmer(e);
+                        System.out.println(exoplanetes.get(finalCompteur).getPlanete());
+                        controleur.actionBoutonsSupprimmer(exoplanetes.get(finalCompteur));
                     } else {
                         //  controleur.actionBoutonsModifier();
                     }
                 }
             });
-            racine.getChildren().add(boutons.get(i));
-            i++;
+            racine.getChildren().add(boutons.get(compteur));
         }
         /*for(Button b : boutons){
             b.setOnAction(new EventHandler<ActionEvent>() {
