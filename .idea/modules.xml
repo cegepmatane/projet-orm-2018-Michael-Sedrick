@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/projet-orm-2018-Michael-Sedrick.iml" filepath="$PROJECT_DIR$/.idea/projet-orm-2018-Michael-Sedrick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ORM-Admin-Michael-Sedrick/ORM-Admin-Michael-Sedrick.iml" filepath="$PROJECT_DIR$/ORM-Admin-Michael-Sedrick/ORM-Admin-Michael-Sedrick.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ORM-Michael-Sedrick/ORM-Michael-Sedrick.iml" filepath="$PROJECT_DIR$/ORM-Michael-Sedrick/ORM-Michael-Sedrick.iml" />
     </modules>
   </component>
 </project>

@@ -38,13 +38,13 @@ public class ExoplaneteVue extends Application{
                 controleur.ajouterExoplanete();
             }
         });
-        boutonModifier = new Button("Modifier");
+       /* boutonModifier = new Button("Modifier");
         boutonModifier.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 controleur.afficherExoplanetesModifier();
             }
-        });
+        });*/
         boutonSupprimer = new Button("Supprimer");
         boutonSupprimer.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -55,7 +55,7 @@ public class ExoplaneteVue extends Application{
 
         racine = new VBox();
         racine.getChildren().add(boutonAjouter);
-        racine.getChildren().add(boutonModifier);
+        //racine.getChildren().add(boutonModifier);
         racine.getChildren().add(boutonSupprimer);
         scenePrincipal.setScene(new Scene(racine,largeurFenetre, hauteurFenetre));
         scenePrincipal.setTitle(nomFenetre);
@@ -66,11 +66,26 @@ public class ExoplaneteVue extends Application{
     public void afficherBoutonsExoplanetes(List<Exoplanete> exoplanetes, boolean supprimer){
         racine.getChildren().clear();
         List<Button> boutons = new ArrayList<Button>();
+        int i = 0;
         for (Exoplanete e : exoplanetes) {
             //racine.getChildren().add(new Button(e.getPlanete()));
             boutons.add(new Button(e.getPlanete()));
+            boutons.get(i).setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    //System.out.println(b.getText());
+                    if (supprimer) {
+                        System.out.println(e.getPlanete());
+                        controleur.actionBoutonsSupprimmer(e);
+                    } else {
+                        //  controleur.actionBoutonsModifier();
+                    }
+                }
+            });
+            racine.getChildren().add(boutons.get(i));
+            i++;
         }
-        for(Button b : boutons){
+        /*for(Button b : boutons){
             b.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
@@ -84,7 +99,7 @@ public class ExoplaneteVue extends Application{
             });
 
             racine.getChildren().add(b);
-        }
+        }*/
     }
 
     public void afficherChampsDeModification(String planete)

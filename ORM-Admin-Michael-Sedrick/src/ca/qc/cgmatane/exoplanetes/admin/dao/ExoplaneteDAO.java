@@ -12,12 +12,26 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ExoplaneteDAO {
-    public List<Exoplanete> rechercherInformationsExoplanete() {
-        List<Exoplanete> exoplanetes = new ArrayList<Exoplanete>();
+
+    protected List<Exoplanete> exoplanetes;
+    protected Session session;
+    protected SessionFactory sessionControleur;
+
+    public ExoplaneteDAO() {
+        exoplanetes = new ArrayList<Exoplanete>();
+
         Configuration configuration = new Configuration();
         configuration.addClass(Exoplanete.class);
-        SessionFactory sessionControleur = configuration.buildSessionFactory();
-        Session session = sessionControleur.openSession();
+        sessionControleur = configuration.buildSessionFactory();
+        session = sessionControleur.openSession();
+    }
+
+    public List<Exoplanete> rechercherInformationsExoplanete() {
+        exoplanetes = new ArrayList<Exoplanete>();
+        Configuration configuration = new Configuration();
+        configuration.addClass(Exoplanete.class);
+        sessionControleur = configuration.buildSessionFactory();
+        session = sessionControleur.openSession();
 
         Transaction operation = session.beginTransaction();
         Iterator visiteurExoplanete = session.createQuery("FROM Exoplanete").iterate(); // nom de la classe pas de la table
@@ -30,10 +44,7 @@ public class ExoplaneteDAO {
             //System.out.println(exoplanete.getPlanete());
         }
 
-
-
         return exoplanetes;
-
     }
 
     public void ajouterExoplanete(String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte) {
@@ -111,10 +122,10 @@ public class ExoplaneteDAO {
         */
     }
 
-    public void SupprimerExoplanete(int id) {
+    public void SupprimerExoplanete(Exoplanete exoplanete) {
         //TODO peut etre un try/catch?
        // String sql =  "DELETE FROM explanetes WHERE planete =" + planete;
-        Configuration configuration = new Configuration();
+        /*Configuration configuration = new Configuration();
         configuration.addClass(Exoplanete.class);
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
@@ -122,11 +133,12 @@ public class ExoplaneteDAO {
         Exoplanete exoplanete = (Exoplanete)session.load(Exoplanete.class, id);
         session.delete(exoplanete);
         session.flush();
-        /*  Query q = session.createQuery(sql);
+        *//*  Query q = session.createQuery(sql);
             q.executeUpdate();
         */
 
-
-
+        Transaction transaction = session.getTransaction();
+        session.delete(exoplanete);
+        transaction.commit();
     }
 }
