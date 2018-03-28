@@ -17,7 +17,7 @@ public class Controleur {
     }
 
     public void ajouterExoplanete() {
-        System.out.println("Ajouter");
+        vue.afficherChampsAjouter();
     }
 
     public void afficherExoplanetesModifier() {
@@ -47,8 +47,9 @@ public class Controleur {
         afficherExoplanetesSupprimer();
     }
 
-    public void actionBoutonsModifier(int id, String planete, String etoile, String type , String masse, String rayon, String flux, String temperature, String periode, String distance, String zone, String ist, String sph, String hzd, String hzc, String hza, String pClasse, String hClasse, String phi, String distance2, String status, String decouverte)
+    public void actionBoutonsAjouter(String planete, String etoile, String type , String masse, String rayon, String flux)
     {
-
+        exoplaneteDAO.ajouterExoplanete(planete, etoile, type , masse, rayon, flux);
+        vue.afficherMenPrincipal();
     }
 }

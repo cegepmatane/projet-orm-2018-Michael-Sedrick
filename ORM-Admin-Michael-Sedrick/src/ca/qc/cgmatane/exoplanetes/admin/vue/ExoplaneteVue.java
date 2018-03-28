@@ -6,11 +6,11 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +29,15 @@ public class ExoplaneteVue extends Application{
                     boutonModifier,
                     boutonSupprimer;
 
+    protected Stage scenePrincipal;
+
     @Override
     public void start(Stage scenePrincipal) {
+        this.scenePrincipal = scenePrincipal;
+        afficherMenPrincipal();
+    }
+    public void afficherMenPrincipal()
+    {
         boutonAjouter = new Button("Ajouter");
         boutonAjouter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -102,12 +109,12 @@ public class ExoplaneteVue extends Application{
         }*/
     }
 
-    public void afficherChampsDeModification(String planete)
+    public void afficherChampsAjouter()
     {
         racine.getChildren().clear();
 
         Label lblNomPlanete = new Label("Planete");
-        TextField nomPlanete = new TextField(planete);
+        TextField nomPlanete = new TextField();
 
         Label lblNomEtoile = new Label("Etoile");
         TextField nomEtoile = new TextField();
@@ -124,50 +131,7 @@ public class ExoplaneteVue extends Application{
         Label lblFlux = new Label("Flux");
         TextField flux = new TextField();
 
-        Label lblTemperature = new Label("Temperature");
-        TextField temperature = new TextField();
 
-        Label lblPeriode = new Label("Periode");
-        TextField periode = new TextField();
-
-        Label lblDistance = new Label("Distance");
-        TextField distance = new TextField();
-
-        Label lblZone = new Label("Zone");
-        TextField zone = new TextField();
-
-        Label lblIst = new Label("Ist");
-        TextField ist = new TextField();
-
-        Label lblSph = new Label("Sph");
-        TextField sph = new TextField();
-
-        Label lblHzd = new Label("Hzd");
-        TextField hzd = new TextField();
-
-        Label lblHzc = new Label("Hzc");
-        TextField hzc = new TextField();
-
-        Label lblHza = new Label("Hza");
-        TextField hza = new TextField();
-
-        Label lblPClasse = new Label("P Classe");
-        TextField pClasse = new TextField();
-
-        Label lblHClasse = new Label("H Classe");
-        TextField hClasse = new TextField();
-
-        Label lblPhi = new Label("Phi");
-        TextField phi = new TextField();
-
-        Label lblDistance2 = new Label("Distance 2");
-        TextField distance2 = new TextField();
-
-        Label lblStatus = new Label("Status");
-        TextField status = new TextField();
-
-        Label lblDecouverte = new Label("Decouverte");
-        TextField decouverte = new TextField();
 
         Button btnSauvegarder = new Button("Sauvegarder les modifications");
 
@@ -175,11 +139,11 @@ public class ExoplaneteVue extends Application{
             @Override
             public void handle(ActionEvent event)
             {
-             //controleur.actionBoutonsModifier(nomPlanete.getText(), nomEtoile.getText(), typeEtoile.getText(), masse.getText() , rayon.getText(), flux.getText(), temperature.getText(), periode.getText(), distance.getText(), zone.getText(), ist.getText(), sph.getText(), hzd.getText(), hzc.getText(), hza.getText(), pClasse.getText(), hClasse.getText(), phi.getText(), distance2.getText(), status.getText(), decouverte.getText());
+             controleur.actionBoutonsAjouter(nomPlanete.getText(), nomEtoile.getText(), typeEtoile.getText(), masse.getText() , rayon.getText(), flux.getText());
             }
         });
 
-        racine.getChildren().addAll(lblNomPlanete, nomPlanete, lblNomEtoile, nomEtoile, lblTypeEtoile, typeEtoile, lblMasse, masse, lblRayon, rayon, lblFlux, flux, lblTemperature, temperature, lblPeriode, periode, lblDistance, distance, lblZone, zone, lblIst, ist, lblSph, sph, lblHzd, hzd,lblHzc, hzc, lblHza, hza, lblPClasse, pClasse, lblHClasse, hClasse, lblPhi, phi, lblDistance2, distance2, lblStatus, status, lblDecouverte, decouverte, btnSauvegarder );
+        racine.getChildren().addAll(lblNomPlanete, nomPlanete, lblNomEtoile, nomEtoile, lblTypeEtoile, typeEtoile, lblMasse, masse, lblRayon, rayon, lblFlux, flux, btnSauvegarder );
 
 
 
