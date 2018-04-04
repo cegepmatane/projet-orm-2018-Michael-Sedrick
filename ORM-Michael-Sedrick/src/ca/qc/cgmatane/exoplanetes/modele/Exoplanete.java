@@ -24,6 +24,16 @@ public class Exoplanete {
 
     public Exoplanete(){}
 
+    public Exoplanete(Exoplanete source)
+    {
+        this.planete = source.planete;
+        this.etoile = source.etoile;
+        this.typeEtoile = source.typeEtoile;
+        this.masse = source.masse;
+        this.rayon = source.rayon;
+        this.flux = source.flux;
+    }
+
     public String getPlanete() {
         return planete;
     }
